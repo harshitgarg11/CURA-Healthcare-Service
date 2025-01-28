@@ -1,0 +1,26 @@
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+// Step 1: Open Browser
+WebUI.openBrowser('')
+
+// Step 2: Navigate to the URL of the CURA Healthcare website
+WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+
+// Step 3: Click on the hamburger menu icon (Open menu)
+WebUI.click(findTestObject('Object Repository/Cura Pages_Login_OR/Page_CURA Healthcare Service/i_CURA Healthcare_fa fa-bars'))
+
+// Step 4: Click on the "Login" button to navigate to the login page
+WebUI.click(findTestObject('Object Repository/Cura Pages_Login_OR/Page_CURA Healthcare Service/a_Login'))
+
+// Step 5: Set username input field with valid username
+WebUI.setText(findTestObject('Object Repository/Cura Pages_Login_OR/Page_CURA Healthcare Service/input_Username_username'), 'John Doe')
+
+// Step 6: Set password input field with the encrypted password
+WebUI.setEncryptedText(findTestObject('Object Repository/Cura Pages_Login_OR/Page_CURA Healthcare Service/input_Password_password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
+
+// Step 7: Click on the "Login" button
+WebUI.click(findTestObject('Object Repository/Cura Pages_Login_OR/Page_CURA Healthcare Service/button_Login'))
+
+// Step 8: Close the browser after successful login
+WebUI.closeBrowser()
