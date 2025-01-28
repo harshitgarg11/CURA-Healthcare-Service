@@ -1,0 +1,23 @@
+// Open Browser and navigate to the CURA Healthcare website
+WebUI.openBrowser('')
+WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+
+// Click on the "Make Appointment" link (Assuming the button is a link)
+WebUI.click(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/a_Make Appointment'))
+
+// Select the "Facility" dropdown and validate if "Hongkong CURA Healthcare Center" is available
+WebUI.selectOptionByLabel(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/select_Facility'), 
+    'Hongkong CURA Healthcare Center', false)
+
+// Get the selected option from the dropdown to validate
+String selectedFacility = WebUI.getText(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/select_Facility'))
+
+// Validate if the selected facility is "Hongkong CURA Healthcare Center"
+if (selectedFacility == 'Hongkong CURA Healthcare Center') {
+    WebUI.comment('Test Passed: "Hongkong CURA Healthcare Center" is available in the dropdown.')
+} else {
+    WebUI.comment('Test Failed: "Hongkong CURA Healthcare Center" is not available in the dropdown.')
+}
+
+// Close the browser
+WebUI.closeBrowser()
