@@ -1,0 +1,90 @@
+### Activity 1.1: Prepare Test Scenarios
+
+Test scenarios are high-level descriptions of what needs to be tested. Below are the possible test scenarios based on the **CURA Healthcare Service** website:
+
+1. **Login Scenario:**
+   - **Scenario 1:** Verify that the user is able to login with valid credentials (valid username and valid password).
+   - **Scenario 2:** Verify that the user is unable to login with invalid credentials (incorrect username or password).
+   - **Scenario 3:** Verify that the login page displays appropriate error messages for invalid inputs (e.g., incorrect password, blank fields).
+   - **Scenario 4:** Verify that the login page redirects to the correct home page upon successful login.
+   
+2. **Appointment Booking Scenario:**
+   - **Scenario 5:** Verify that the user is able to book an appointment with a doctor after successful login.
+   - **Scenario 6:** Verify that the system shows a list of available doctors for appointment booking.
+   - **Scenario 7:** Verify that the user can select a doctor and book an appointment for a specific date and time.
+   - **Scenario 8:** Verify that the system confirms the booking after the appointment is successfully scheduled.
+   
+3. **Test User Registration Scenario:**
+   - **Scenario 9:** Verify that the user is able to successfully register for the CURA Healthcare service using valid registration information.
+   - **Scenario 10:** Verify that the system shows error messages if the registration form is submitted with missing or invalid information (e.g., invalid email, password).
+   
+4. **Appointment Cancellation Scenario:**
+   - **Scenario 11:** Verify that the user can cancel an existing appointment.
+   - **Scenario 12:** Verify that the system prompts the user with a confirmation message when canceling an appointment.
+   - **Scenario 13:** Verify that the system correctly updates the doctor’s availability after an appointment is canceled.
+
+5. **User Logout Scenario:**
+   - **Scenario 14:** Verify that the user is able to log out successfully.
+   - **Scenario 15:** Verify that the user is redirected to the login page after logging out.
+
+---
+
+### Activity 1.2: Test Case Development
+
+Below is a test case template for some of the above scenarios:
+
+#### **Test Case 1: Verify Login with Valid Credentials**
+
+| Test Case ID     | TC001                        |
+|------------------|------------------------------|
+| Test Case Title  | Verify Login with Valid Credentials |
+| Pre-Condition    | The user must be registered and have valid credentials (username and password). |
+| Test Steps       | 1. Navigate to the CURA Healthcare login page. <br> 2. Enter a valid username in the username field. <br> 3. Enter a valid password in the password field. <br> 4. Click the "Login" button. |
+| Expected Result  | User is successfully logged in and redirected to the home page. |
+| Post-Condition   | User is logged into the application. |
+| Pass Criteria    | User is logged in and redirected to the home page without errors. |
+| Fail Criteria    | User is unable to log in, or an error message is displayed. |
+
+---
+
+#### **Test Case 2: Verify Appointment Booking Functionality**
+
+| Test Case ID     | TC002                        |
+|------------------|------------------------------|
+| Test Case Title  | Verify Appointment Booking |
+| Pre-Condition    | The user must be logged in and on the appointment booking page. |
+| Test Steps       | 1. Navigate to the "Make Appointment" page. <br> 2. Select a doctor from the list of available doctors. <br> 3. Select an appointment date and time. <br> 4. Click the "Book Appointment" button. |
+| Expected Result  | The system confirms the appointment, and the details of the appointment are displayed. |
+| Post-Condition   | Appointment is scheduled and saved in the system. |
+| Pass Criteria    | Appointment is successfully booked and confirmed. |
+| Fail Criteria    | Appointment booking fails or no confirmation message is displayed. |
+
+---
+
+### Activity 1.3: Validation Table
+
+The validation table helps define specific input criteria for different fields in the system. Below is the **validation table** for the **Login** functionality based on the baseline document:
+
+#### **Username Specifications:**
+
+| Criteria                          | Specification                                         | Valid Example    | Invalid Example     |
+|-----------------------------------|------------------------------------------------------|------------------|---------------------|
+| **Minimum Length**                | Minimum 4 characters                                 | "john"           | "j"                 |
+| **Maximum Length**                | Maximum 15 characters                                | "john12345"      | "averylongusername" |
+| **Starting Character**            | Starts with an alphabet                              | "john123"        | "@john123"          |
+| **Special Characters**            | First letter is an alphabet, followed by optional special characters | "john_doe"       | "_john"             |
+| **Capital Letter**                | Username must contain at least one uppercase letter  | "John"           | "john"              |
+
+#### **Password Specifications:**
+
+| Criteria                          | Specification                                         | Valid Example    | Invalid Example     |
+|-----------------------------------|------------------------------------------------------|------------------|---------------------|
+| **Minimum Length**                | Minimum 6 characters                                 | "John123!"       | "john1"             |
+| **Maximum Length**                | Maximum 20 characters                                | "John12345678!"  | "averylongpassword" |
+| **Starting Character**            | Starts with an alphabet                              | "John123!"       | "@john123!"         |
+| **Special Characters**            | Password must contain at least one special character | "John123!"       | "John123"           |
+| **Capital Letter**                | Password must contain at least one uppercase letter  | "John123!"       | "john123!"          |
+
+---
+
+This approach provides the necessary details to develop test cases and validate input data to ensure the proper functionality of the CURA Healthcare Service. By following the above test scenarios, test cases, and validation table, testers can ensure that all core features of the application are covered during the test execution phase.
