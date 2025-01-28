@@ -1,0 +1,22 @@
+import com.kms.katalon.core.annotation.BeforeTest
+import com.kms.katalon.core.annotation.AfterTest
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+class CURA_MakeAppointment_TListener {
+    
+    // This method will run before each test case in the test suite
+    @BeforeTest
+    def beforeTest() {
+        // Open the browser and navigate to the website
+        WebUI.openBrowser('')
+        WebUI.maximizeWindow()
+        WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+    }
+
+    // This method will run after each test case in the test suite
+    @AfterTest
+    def afterTest() {
+        // Close the browser after test execution
+        WebUI.closeBrowser()
+    }
+}
