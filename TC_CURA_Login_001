@@ -1,0 +1,2 @@
+String username = TestDataFactory.findTestData('Data Files/TestData_CURA_Login').getValue(1, row)
+String password = TestDataFactory.findTestData('Data Files/TestData_CURA_Login').getValue(2, row)
