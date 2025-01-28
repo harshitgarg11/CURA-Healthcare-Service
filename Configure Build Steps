@@ -1,0 +1,15 @@
+cd "C:\Users\MamathaBalaram\git\SamplegitIntegration\SamplegitIntegration"
+git pull "https://github.com/mamathat7/demosample.git"
+
+cd "C:\katalonRuntimeEngine\Katalon_Studio_Engine_Windows_64-8.6.5"
+
+katalonc -noSplash -runMode=console -projectPath="C:\Users\MamathaBalaram\Katalon Studio\KatalonAutomationTesting\KatalonAutomationTesting.prj" -retry=0 -testSuitePath="Test Suites/Jenkin_testsuite_sample" -browserType="Chrome" -executionProfile="default" -apiKey="0d717ad6-0eab-4dbb-b878-969cf75a8c10" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true
+
+cd "c:\Users\MamathaBalaram\git\SamplegitIntegration\SamplegitIntegration"
+
+git status
+git add *.*
+git commit -m "change for test on jenkins"
+git push -u "https://github.com/mamathat7/demosample.git" main
+
+echo Success
