@@ -1,0 +1,6 @@
+boolean isDisabled = WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/input_Medicaid_medicaid'), 'disabled', 'true', 0)
+if (isDisabled) {
+    System.out.println('Checkbox is disabled, cannot interact with it.')
+} else {
+    // Proceed with checking/unchecking
+}
