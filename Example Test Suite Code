@@ -1,0 +1,15 @@
+// @SetUp: Preparing environment before tests run
+@SetUp
+def setUp() {
+    WebUI.openBrowser('')
+    WebUI.maximizeWindow()
+    WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+    // Optionally, you can call the login test case here
+    WebUI.callTestCase(findTestCase('TC_CURA_Login_001'), [:])
+}
+
+// @TearDown: Clean up after tests run
+@TearDown
+def tearDown() {
+    WebUI.closeBrowser()
+}
