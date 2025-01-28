@@ -1,0 +1,52 @@
+Project Overview:
+The CURA Healthcare Service aims to provide a platform where users can book appointments with doctors, addressing issues like long waiting times and doctor availability. The automation testing process involves testing this web-based application to ensure its functionalities work correctly.
+
+Test Automation Project Flow:
+Define Problem/Understanding:
+
+Understand the challenges faced by users (patients) while interacting with the application, such as appointment booking difficulties, login issues, and validation errors.
+Specify the Business Problem:
+
+The business problem is the inefficiency of manual appointment scheduling, which leads to delays, mismanagement, and an inability to confirm doctor availability beforehand.
+Business Impact:
+
+Automating this process reduces errors, increases efficiency, ensures 24/7 availability for booking appointments, and improves the overall user experience.
+Test Case Preparation:
+
+Write detailed test cases based on the functional requirements for booking appointments, verifying login credentials, and validating button interactions.
+Analyze Requirements:
+
+Understand the functional and non-functional requirements for the AUT. For example:
+Functional: Validating login functionality, checking appointment booking functionality, and verifying doctor availability.
+Non-functional: Performance, cross-browser compatibility, and security aspects.
+Create Scenarios & Collect Input Data:
+
+Break down the functionalities into smaller test scenarios, such as valid and invalid login attempts, appointment booking with different inputs, etc.
+Test Data Preparation (Validation Table):
+
+Prepare the test data in a validation table to capture inputs for different scenarios, such as valid patient names, valid doctor credentials, etc.
+Script/Test Case Execution:
+
+Use Katalon Studio to automate the test cases. This may include:
+Verifying the login process.
+Automating the appointment booking flow.
+Validating button clicks and their actions.
+Handling and Validating Buttons:
+
+Write automation scripts to ensure buttons are correctly linked to their respective actions, such as "Book Appointment," "Submit," etc.
+Test Listeners:
+
+Implement test listeners to log events, generate reports, and handle different test cases, such as passing, failing, or skipped tests.
+Build Delivery:
+
+Once the automation scripts pass successfully, package the tests for delivery, ensuring that the test suite is ready for execution and analysis.
+Integrating Katalon with Git and Jenkins:
+
+Version control: Store test scripts in a Git repository.
+Continuous integration: Set up Jenkins to run tests automatically on code changes or periodically.
+Cross-browser Testing using TestCloud:
+
+Validate the functionality across different browsers using Katalon TestCloud, ensuring compatibility on Chrome, Firefox, Edge, etc.
+Generating and Analyzing Reports:
+
+Generate detailed reports from Katalon Studio, analyze them to detect issues, and send automated test reports through email for stakeholders to review.
