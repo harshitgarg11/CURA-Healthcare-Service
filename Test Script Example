@@ -1,0 +1,30 @@
+// Open the browser and navigate to the CURA Healthcare website
+WebUI.openBrowser('')
+WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+
+// Click the "Make Appointment" link (Assuming you need to navigate to the appointment page first)
+WebUI.click(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/a_Make Appointment'))
+
+// Verify if the "Medicaid" checkbox is not checked initially
+boolean unchecked = WebUI.verifyElementNotChecked(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/input_Medicaid_medicaid'), 0)
+
+// If the checkbox is unchecked, check it, else uncheck it
+if (unchecked) {
+    System.out.println('Checkbox is not checked')
+    WebUI.check(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/input_Medicaid_medicaid'))
+    System.out.println('Checkbox is now checked')
+} else {
+    System.out.println('Checkbox is already checked')
+    WebUI.uncheck(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/input_Medicaid_medicaid'))
+    System.out.println('Checkbox is now unchecked')
+}
+
+// Wait for 3 seconds to observe the change
+WebUI.delay(3)
+
+// Verify if the checkbox is checked now
+WebUI.verifyElementChecked(findTestObject('Object Repository/Cura Pages_MakeAppointment_OR/Page_CURA Healthcare Service/input_Medicaid_medicaid'), 0)
+
+// Close the browser after the test is completed
+WebUI.closeBrowser()
+ 
